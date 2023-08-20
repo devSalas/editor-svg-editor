@@ -11,6 +11,9 @@ export default {
       },
       boxShadow: {
         'circle': ' 0px 0px 150px 80px #000000'
+      },
+      backgroundImage: {
+        'hero': "url('./fondo-svg.png')",
       }
     },
   },

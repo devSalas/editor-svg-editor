@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-[url('fondo-svg.png')] bg-contain bg-no-repeat bg-center flex flex-col  items-center relative font-serif">
+    <div className="h-screen w-screen bg-hero bg-contain bg-no-repeat bg-center flex flex-col  items-center relative font-serif">
       <h1 className="text-4xl absolute md:pt-28 text-center"> Con un Click cambie los colores de su imagen SVG</h1>
       <div className="m-auto ">
         <form onSubmit={redirectToOtherPage} className=" relative flex flex-col justify-center items-center min-w-[250px] max-w-xs">
