@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import Color from "./color"
 import { ImageContext } from "../context/ImageContext"
+import Color from "./Color"
 
 const ColorStrip=()=>{
   const {colors} =useContext(ImageContext)
@@ -11,6 +11,7 @@ const ColorStrip=()=>{
       <Color colorInitial={colors.colorSecond} order={2}/>
       <Color colorInitial={colors.colorThird} order={3}/>
     </div>
+    
   )
 }
 

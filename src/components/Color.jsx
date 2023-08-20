@@ -1,11 +1,11 @@
-import {  useState,useContext} from "react"
-import { ImageContext } from "../context/ImageContext"
+import  { useContext, useState } from 'react'
+import { ImageContext } from '../context/ImageContext'
 
-const Color =({colorInitial})=>{
+const Color = ({colorInitial}) => {
   const {setColors} =useContext(ImageContext)
   const [color,setColor]=useState(colorInitial)
 
-  console.log(colorInitial)
+
 
   const handleKeyDown =(e)=>{
     setColor(e.target.value)
@@ -25,4 +25,5 @@ const Color =({colorInitial})=>{
   )
 }
 
-export default Color;
+export default Color
+

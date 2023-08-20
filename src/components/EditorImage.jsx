@@ -29,6 +29,7 @@ const EditorImage = () => {
     link.click();
   }
   return (
+    
     <div className=" w-screen h-screen text-black-500 flex flex-col items-center relative max-w-7xl m-auto font-serif">
       
         <h2 className='text-4xl mt-10 font-extrabold'> Editor de Color Imagen SVG</h2>
