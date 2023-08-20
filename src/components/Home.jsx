@@ -1,6 +1,8 @@
 import { ImageContext } from '../context/ImageContext';
 import { useContext,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "./Home.css"
+
 const Home = () => {
   const navigate = useNavigate();
   const { setImageUrl} = useContext(ImageContext);
