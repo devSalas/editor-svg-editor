@@ -9,21 +9,23 @@ const Home = () => {
   const [nameImage,setNameImage] = useState("")
 
   const handleChange = (e) => {
+
     const file = e.target.files[0];
+    if(!file) return;
+    if(file.type != "image/svg+xml") return;
     setNameImage(file.name)
     if (file) {
       const reader = new FileReader();
-      reader.onload = (e) => {
-        console.log(e.target.result)
-        setImageUrl(e.target.result);
-      };
+      reader.onload = (e) =>  setImageUrl(e.target.result);
       reader.readAsText(file);
-    }
+    } 
   };
 
   const redirectToOtherPage = (e) => {
     e.preventDefault();
-    return navigate('/editor');
+    
+    (setImageUrl) ? navigate('/editor')  : ""
+  
   };
 
   return (
@@ -33,9 +35,10 @@ const Home = () => {
         <form onSubmit={redirectToOtherPage} className=" relative flex flex-col justify-center items-center min-w-[250px] max-w-xs">
           <div className="bg-white w-full py-4  rounded-lg relative  flex justify-center items-center gap-3 z-20   hover:border-black hover:border-2 box-content ">
             <input
+              type="file"
+              accept="image/svg+xml"
               onChange={handleChange}
               className="absolute  left-0 top-0 w-full h-full opacity-0 cursor-pointer  "
-              type="file"
             />
             <label htmlFor="" className="">
              {nameImage=="" ?"Seleccionar archivo" :nameImage }
