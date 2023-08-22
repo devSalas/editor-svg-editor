@@ -3,9 +3,10 @@ import { useContext,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Home.css"
 
+
 const Home = () => {
   const navigate = useNavigate();
-  const { setImageUrl} = useContext(ImageContext);
+  const { setImageUrl,imageUrl} = useContext(ImageContext);
   const [nameImage,setNameImage] = useState("")
 
   const handleChange = (e) => {
@@ -24,7 +25,7 @@ const Home = () => {
   const redirectToOtherPage = (e) => {
     e.preventDefault();
     
-    (setImageUrl) ? navigate('/editor')  : ""
+    (imageUrl) ? navigate('/editor')  : ""
   
   };
 
@@ -54,6 +55,7 @@ const Home = () => {
             comenzar
           </button>
         </form>
+        
       </div>
     </div>
   );
